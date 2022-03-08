@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+
 /**
  * Project name(项目名称)：Spring_MVC_Converter
  * Package(包名): mao.spring_mvc_converter
@@ -54,6 +55,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class MyController
 {
+    /**
+     * Test 1 string.
+     *
+     * @param a     the a
+     * @param b     the b
+     * @param model the model
+     * @return the string
+     */
     @RequestMapping("test1")
     public String test1(@RequestParam int a, @RequestParam int b, Model model)
     {
@@ -62,12 +71,24 @@ public class MyController
         return "test1";
     }
 
+    /**
+     * Add user string.
+     *
+     * @return the string
+     */
     @RequestMapping("/addUser")
     public String addUser()
     {
         return "addUser";
     }
 
+    /**
+     * My converter string.
+     *
+     * @param user  the user
+     * @param model the model
+     * @return the string
+     */
     @RequestMapping("/converter")
     public String myConverter(@RequestParam("user") User user, Model model)
     {
