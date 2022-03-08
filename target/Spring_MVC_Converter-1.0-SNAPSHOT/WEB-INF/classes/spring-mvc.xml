@@ -11,7 +11,7 @@
     <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
         <property name="converters">
             <list>
-                <bean class="mao.spring_mvc_converter.UserConverter" />
+                <bean class="mao.spring_mvc_converter.UserConverter"/>
             </list>
         </property>
     </bean>
